@@ -297,3 +297,124 @@ nothing to commit, working tree clean
 
 Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
 $
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git add .
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git commit -m "vid6"
+[master 8de42be] vid6
+ 1 file changed, 97 insertions(+)
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.07 KiB | 273.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Shruti9756/git-tutorial.git
+   01a7db2..8de42be  master -> master
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git diff
+diff --git a/utility.txt b/utility.txt
+index 57664b2..7a3879a 100644
+--- a/utility.txt
++++ b/utility.txt
+@@ -1 +1 @@
+-utility function for version 1
+\ No newline at end of file
++utility function for version 2
+\ No newline at end of file
+diff --git a/v1.txt b/v1.txt
+index f9802cf..8aac0a0 100644
+--- a/v1.txt
++++ b/v1.txt
+@@ -1 +1 @@
+-this is version 1 for software
++this is version 1 for software --good
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git add .
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git diff
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git diff --staged utility.txt
+diff --git a/utility.txt b/utility.txt
+index 57664b2..7a3879a 100644
+--- a/utility.txt
++++ b/utility.txt
+@@ -1 +1 @@
+-utility function for version 1
+\ No newline at end of file
++utility function for version 2
+\ No newline at end of file
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   utility.txt
+        modified:   v1.txt
+
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git reset utility.txt
+Unstaged changes after reset:
+M       utility.txt
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git checkoututility.txt
+git: 'checkoututility.txt' is not a git command. See 'git --help'.
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git checkout utility.txt
+Updated 1 path from the index
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git checkout .
+Updated 0 paths from the index
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git log
+commit 8de42bec1490a50c3876bec9e527522346a39559 (HEAD -> master, origin/master)
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sun May 15 00:48:13 2022 +0530
+
+    vid6
+
+commit 01a7db2c0968b35a40c4a62f60479714549b7e8b
+Author: Shruti9756 <103516233+Shruti9756@users.noreply.github.com>
+Date:   Sun May 15 00:36:35 2022 +0530
+
+    Update v1.txt
+
+commit b0ad3cc777063504104c733015979494626a99e4
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sun May 15 00:33:13 2022 +0530
+
+    changed complete commands we entered in bash.txt
+
+commit 02fd5512ad6fba5838174f9b95023aae59dafdf5
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sat May 14 23:48:39 2022 +0530
+
+    Version1
+:
+
