@@ -1,0 +1,202 @@
+Shri@Shruti-PC MINGW64 ~/Desktop/git
+$ git --version
+git version 2.36.1.windows.1
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git
+$ git init
+Initialized empty Git repository in C:/Users/Shri/Desktop/git/.git/
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        utility.txt
+        v1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git add .
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   utility.txt
+        new file:   v1.txt
+
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git commit -m "Version1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Shri@Shruti-PC.(none)')
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config --global user.email "shrutidayama111@gmail.com"
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config --global user.name "shruti"
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git commit -m "Version1"
+[master (root-commit) 02fd551] Version1
+ 2 files changed, 2 insertions(+)
+ create mode 100644 utility.txt
+ create mode 100644 v1.txt
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git log
+commit 02fd5512ad6fba5838174f9b95023aae59dafdf5 (HEAD -> master)
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sat May 14 23:48:39 2022 +0530
+
+    Version1
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config --global user.name "shruti"
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config --global user.email "shrutidayama111@gmail.com"
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ^C
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config user.name
+shruti
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ^C
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        complete commands we entered in bash.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git add .
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   complete commands we entered in bash.txt
+
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git remove add origin git@github.com:Shruti9756/git-tutorial.git
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git remote add origin git@github.com:Shruti9756/git-tutorial.git
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:Shruti9756/git-tutorial.git'
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git config user.email
+shrutidayama111@gmail.com
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ssh-keygen -t ed25519-sk -C "shrutidayama111@gmail.com"
+Generating public/private ed25519-sk key pair.
+You may need to touch your authenticator to authorize key generation.
+Key enrollment failed: device not found
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ssh-keygen -t rsa -b 4096 -C "shrutidayama111@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Shri/.ssh/id_rsa):
+Created directory '/c/Users/Shri/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Shri/.ssh/id_rsa
+Your public key has been saved in /c/Users/Shri/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:EOSYhGIkx+jlvb+7L2phySnHoBzgUsrwH0iHpU1uXAs shrutidayama111@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|o+.+E.+          |
+|*o*O.* o         |
+|B*+oO +          |
+|o=o+.. .         |
+|o o.+.+ S        |
+| o ..X           |
+|    + o          |
+|     . o         |
+|    ...+*.       |
++----[SHA256]-----+
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ eval $(ssh-agent -s)
+Agent pid 1208
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ssh-add ~/.sssh/id_rsa
+/c/Users/Shri/.sssh/id_rsa: No such file or directory
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Shri/.ssh/id_rsa (shrutidayama111@gmail.com)
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 295 bytes | 73.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Shruti9756/git-tutorial.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
