@@ -1,3 +1,4 @@
+
 Shri@Shruti-PC MINGW64 ~/Desktop/git
 $ git --version
 git version 2.36.1.windows.1
@@ -200,3 +201,99 @@ To github.com:Shruti9756/git-tutorial.git
 branch 'master' set up to track 'origin/master'.
 
 Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ ^C
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   complete commands we entered in bash.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   complete commands we entered in bash.txt
+
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git add .
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git commit -m "changed complete commands we entered in bash.txt"
+[master b0ad3cc] changed complete commands we entered in bash.txt
+ 1 file changed, 202 insertions(+)
+ create mode 100644 complete commands we entered in bash.txt
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.17 KiB | 555.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Shruti9756/git-tutorial.git
+   02fd551..b0ad3cc  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git log
+commit b0ad3cc777063504104c733015979494626a99e4 (HEAD -> master, origin/master)
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sun May 15 00:33:13 2022 +0530
+
+    changed complete commands we entered in bash.txt
+
+commit 02fd5512ad6fba5838174f9b95023aae59dafdf5
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sat May 14 23:48:39 2022 +0530
+
+    Version1
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 656 bytes | 3.00 KiB/s, done.
+From github.com:Shruti9756/git-tutorial
+ * branch            master     -> FETCH_HEAD
+   b0ad3cc..01a7db2  master     -> origin/master
+Updating b0ad3cc..01a7db2
+Fast-forward
+ v1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git log
+commit 01a7db2c0968b35a40c4a62f60479714549b7e8b (HEAD -> master, origin/master)
+Author: Shruti9756 <103516233+Shruti9756@users.noreply.github.com>
+Date:   Sun May 15 00:36:35 2022 +0530
+
+    Update v1.txt
+
+commit b0ad3cc777063504104c733015979494626a99e4
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sun May 15 00:33:13 2022 +0530
+
+    changed complete commands we entered in bash.txt
+
+commit 02fd5512ad6fba5838174f9b95023aae59dafdf5
+Author: shruti <shrutidayama111@gmail.com>
+Date:   Sat May 14 23:48:39 2022 +0530
+
+    Version1
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shri@Shruti-PC MINGW64 ~/Desktop/git (master)
+$
